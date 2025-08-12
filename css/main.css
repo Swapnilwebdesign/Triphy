@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Satisfy&display=swap');
 
 * {
   margin: 0;
@@ -221,6 +221,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 31px 0 0 0;
+  overflow: hidden;
 }
 
 .hero h6 {
@@ -296,6 +297,7 @@ ul {
 .tour-categories {
   background: #f9f9f9;
   font-family: 'Rubik', sans-serif;
+  overflow: hidden;
 }
 
 .tour-card {
@@ -421,6 +423,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5% 0;
+  overflow:hidden;
 }
 
 
@@ -572,7 +575,9 @@ ul {
   color: #fff;
 }
 
-
+.tour-experience{
+  overflow: hidden;
+}
 .aad-section img {
   border-radius: 10px;
 }
@@ -583,6 +588,7 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 5% 0;
+  overflow: hidden;
 }
 
 .why_choose_us {
@@ -1175,12 +1181,19 @@ ul {
   font-size: 14px;
 }
 
+.contact_info p {
+  color: #aaa8a8;
+  padding: 6px 0;
+  display: block;
+  font-size: 16px;
+  transition: 0.3s;
+}
 .Quick_Links ul {
   padding: 0%;
 }
 
 .Quick_Links ul li a {
-  color: #6b6a6a;
+  color: #aaa8a8;
   padding: 6px 0;
   display: block;
   font-size: 14px;
@@ -1192,18 +1205,19 @@ ul {
   color: #f38035;
 }
 
+.We_are_here p{
+  color: #aaa8a8;
+  padding: 6px 0;
+  display: block;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
 
 @media screen and (max-width: 768px){
   .subscribe-image {
     margin-top: 30px !important;
   }
-
-  
-element.style {
-}
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-    cursor: pointer;
-}
 .next-btn {
     right: 20%;
 }
@@ -1235,4 +1249,41 @@ element.style {
 .Payment img{
   width: 10%
 }
+}
+
+#button {
+  display: inline-block;
+  background-color: #4ca327;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #f38035;
+}
+#button:active {
+  background-color: #e9bda0;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
 }
